@@ -1,0 +1,702 @@
+ERROR - 2023-07-16 12:45:00 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\sms\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\sms\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'studentreg', 3306, '', 0)
+#1 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\sms\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sms\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sms\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#6 C:\xampp\htdocs\sms\app\Models\StudentModel.php(15): CodeIgniter\BaseModel->findAll()
+#7 C:\xampp\htdocs\sms\app\Controllers\AdminDashboardController.php(14): App\Models\StudentModel->getAllStudents()
+#8 C:\xampp\htdocs\sms\system\CodeIgniter.php(932): App\Controllers\AdminDashboardController->index()
+#9 C:\xampp\htdocs\sms\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+#10 C:\xampp\htdocs\sms\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sms\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\sms\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\sms\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\sms\system\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\sms\system\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+#5 C:\xampp\htdocs\sms\app\Models\StudentModel.php(15): CodeIgniter\BaseModel->findAll()
+#6 C:\xampp\htdocs\sms\app\Controllers\AdminDashboardController.php(14): App\Models\StudentModel->getAllStudents()
+#7 C:\xampp\htdocs\sms\system\CodeIgniter.php(932): App\Controllers\AdminDashboardController->index()
+#8 C:\xampp\htdocs\sms\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+#9 C:\xampp\htdocs\sms\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\sms\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-07-16 12:45:00 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `students`', [], false)
+ 3 SYSTEMPATH\Model.php(241): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(618): CodeIgniter\Model->doFindAll(0, 0)
+ 5 APPPATH\Models\StudentModel.php(15): CodeIgniter\BaseModel->findAll()
+ 6 APPPATH\Controllers\AdminDashboardController.php(14): App\Models\StudentModel->getAllStudents()
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminDashboardController->index()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-16 12:45:34 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\sms\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\sms\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'studentreg', 3306, '', 0)
+#1 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\sms\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sms\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sms\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\sms\app\Models\AdminModel.php(15): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\sms\app\Controllers\AdminLoginController.php(24): App\Models\AdminModel->getAdminByEmail('groot53@admin.i...')
+#8 C:\xampp\htdocs\sms\system\CodeIgniter.php(932): App\Controllers\AdminLoginController->login()
+#9 C:\xampp\htdocs\sms\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLoginController))
+#10 C:\xampp\htdocs\sms\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sms\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\sms\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\sms\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\sms\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\sms\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\sms\app\Models\AdminModel.php(15): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\sms\app\Controllers\AdminLoginController.php(24): App\Models\AdminModel->getAdminByEmail('groot53@admin.i...')
+#7 C:\xampp\htdocs\sms\system\CodeIgniter.php(932): App\Controllers\AdminLoginController->login()
+#8 C:\xampp\htdocs\sms\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLoginController))
+#9 C:\xampp\htdocs\sms\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\sms\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-07-16 12:45:34 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admins`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\AdminModel.php(15): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\AdminLoginController.php(24): App\Models\AdminModel->getAdminByEmail('groot53@admin.in')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminLoginController->login()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLoginController))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-16 12:47:37 --> Error connecting to the database: mysqli_sql_exception: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\sms\system\Database\MySQLi\Connection.php:173
+Stack trace:
+#0 C:\xampp\htdocs\sms\system\Database\MySQLi\Connection.php(173): mysqli->real_connect('localhost', 'root', Object(SensitiveParameterValue), 'studentreg', 3306, '', 0)
+#1 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#2 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#3 C:\xampp\htdocs\sms\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#4 C:\xampp\htdocs\sms\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#5 C:\xampp\htdocs\sms\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#6 C:\xampp\htdocs\sms\app\Models\AdminModel.php(15): CodeIgniter\BaseModel->first()
+#7 C:\xampp\htdocs\sms\app\Controllers\AdminLoginController.php(24): App\Models\AdminModel->getAdminByEmail('groot53@admin.i...')
+#8 C:\xampp\htdocs\sms\system\CodeIgniter.php(932): App\Controllers\AdminLoginController->login()
+#9 C:\xampp\htdocs\sms\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLoginController))
+#10 C:\xampp\htdocs\sms\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sms\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+
+Next CodeIgniter\Database\Exceptions\DatabaseException: No connection could be made because the target machine actively refused it in C:\xampp\htdocs\sms\system\Database\MySQLi\Connection.php:218
+Stack trace:
+#0 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(391): CodeIgniter\Database\MySQLi\Connection->connect(false)
+#1 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+#2 C:\xampp\htdocs\sms\system\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *\nFROM `...', Array, false)
+#3 C:\xampp\htdocs\sms\system\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+#4 C:\xampp\htdocs\sms\system\BaseModel.php(656): CodeIgniter\Model->doFirst()
+#5 C:\xampp\htdocs\sms\app\Models\AdminModel.php(15): CodeIgniter\BaseModel->first()
+#6 C:\xampp\htdocs\sms\app\Controllers\AdminLoginController.php(24): App\Models\AdminModel->getAdminByEmail('groot53@admin.i...')
+#7 C:\xampp\htdocs\sms\system\CodeIgniter.php(932): App\Controllers\AdminLoginController->login()
+#8 C:\xampp\htdocs\sms\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLoginController))
+#9 C:\xampp\htdocs\sms\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#10 C:\xampp\htdocs\sms\index.php(67): CodeIgniter\CodeIgniter->run()
+#11 {main}
+CRITICAL - 2023-07-16 12:47:37 --> Unable to connect to the database.
+Main connection [MySQLi]: No connection could be made because the target machine actively refused it
+in SYSTEMPATH\Database\BaseConnection.php on line 427.
+ 1 SYSTEMPATH\Database\BaseConnection.php(574): CodeIgniter\Database\BaseConnection->initialize()
+ 2 SYSTEMPATH\Database\BaseBuilder.php(1616): CodeIgniter\Database\BaseConnection->query('SELECT *
+FROM `admins`
+WHERE `email` = :email:
+ LIMIT 1', [...], false)
+ 3 SYSTEMPATH\Model.php(268): CodeIgniter\Database\BaseBuilder->get()
+ 4 SYSTEMPATH\BaseModel.php(656): CodeIgniter\Model->doFirst()
+ 5 APPPATH\Models\AdminModel.php(15): CodeIgniter\BaseModel->first()
+ 6 APPPATH\Controllers\AdminLoginController.php(24): App\Models\AdminModel->getAdminByEmail('groot53@admin.in')
+ 7 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminLoginController->login()
+ 8 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminLoginController))
+ 9 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+10 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 13:04:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:04:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:08:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:08:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:08:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:08:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:09:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:09:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:09:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:09:37 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:09:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:12:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 13:12:45 --> Call to undefined method App\Models\StudentModel::getAdminByEmail
+in SYSTEMPATH\Model.php on line 838.
+ 1 APPPATH\Controllers\StudentLoginController.php(42): CodeIgniter\Model->__call('getAdminByEmail', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentLoginController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentLoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 13:13:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 13:13:38 --> Call to undefined method App\Models\StudentModel::getAdminByEmail
+in SYSTEMPATH\Model.php on line 838.
+ 1 APPPATH\Controllers\StudentLoginController.php(42): CodeIgniter\Model->__call('getAdminByEmail', [...])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentLoginController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentLoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 13:14:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:14:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:15:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:15:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:15:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:15:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:16:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:16:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:16:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:17:58 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:17:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:18:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:18:11 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:18:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:18:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:19:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:22:35 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 13:23:04 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [])
+ 3 APPPATH\Models\StudentModel.php(24): CodeIgniter\Model->update()
+ 4 APPPATH\Controllers\StudentLoginController.php(84): App\Models\StudentModel->changePassword('aditya.gaikwad@mitaoe.ac.in', '321')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentLoginController->changePassword()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentLoginController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 13:23:24 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:23:26 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:23:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:23:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:23:36 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:23:40 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 13:23:40 --> Invalid file: "student/edit.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('student/edit.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('student/edit', [], true)
+ 3 APPPATH\Controllers\StudentDashboardController.php(42): view('student/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentDashboardController->edit()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 13:23:42 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:23:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:24:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 13:24:07 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [])
+ 3 APPPATH\Models\StudentModel.php(24): CodeIgniter\Model->update()
+ 4 APPPATH\Controllers\StudentLoginController.php(84): App\Models\StudentModel->changePassword('aditya.gaikwad@mitaoe.ac.in', '321')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentLoginController->changePassword()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentLoginController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 13:32:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:32:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:32:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 13:32:29 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [])
+ 3 APPPATH\Models\StudentModel.php(27): CodeIgniter\Model->update()
+ 4 APPPATH\Controllers\StudentLoginController.php(84): App\Models\StudentModel->changePassword('aditya.gaikwad@mitaoe.ac.in', '123')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentLoginController->changePassword()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentLoginController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 13:36:39 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:36:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:39:13 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 13:39:13 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [])
+ 3 APPPATH\Models\StudentModel.php(22): CodeIgniter\Model->update()
+ 4 APPPATH\Controllers\StudentLoginController.php(84): App\Models\StudentModel->changePassword('aditya.gaikwad@mitaoe.ac.in', '1234')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentLoginController->changePassword()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentLoginController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 13:39:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:40:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:40:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 13:40:20 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [])
+ 3 APPPATH\Models\StudentModel.php(24): CodeIgniter\Model->update()
+ 4 APPPATH\Controllers\StudentLoginController.php(84): App\Models\StudentModel->changePassword('aditya.gaikwad@mitaoe.ac.in', '123')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentLoginController->changePassword()
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentLoginController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 13:40:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:42:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:44:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:44:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:48:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:48:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:48:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:48:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:48:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:53:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 13:53:12 --> Trying to access array offset on value of type null
+in APPPATH\Views\student\dashboard.php on line 15.
+ 1 APPPATH\Views\student\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('student/dashboard', [], true)
+ 5 APPPATH\Controllers\StudentDashboardController.php(30): view('student/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentDashboardController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 13:56:49 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 13:56:49 --> Trying to access array offset on value of type null
+in APPPATH\Views\student\dashboard.php on line 15.
+ 1 APPPATH\Views\student\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('student/dashboard', [], true)
+ 5 APPPATH\Controllers\StudentDashboardController.php(30): view('student/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentDashboardController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 13:56:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 13:56:50 --> Trying to access array offset on value of type null
+in APPPATH\Views\student\dashboard.php on line 15.
+ 1 APPPATH\Views\student\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('student/dashboard', [], true)
+ 5 APPPATH\Controllers\StudentDashboardController.php(30): view('student/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentDashboardController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 13:56:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:57:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:57:01 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 13:57:01 --> Trying to access array offset on value of type null
+in APPPATH\Views\student\dashboard.php on line 15.
+ 1 APPPATH\Views\student\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('student/dashboard', [], true)
+ 5 APPPATH\Controllers\StudentDashboardController.php(30): view('student/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentDashboardController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 13:57:03 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:57:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:57:19 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 13:57:19 --> Trying to access array offset on value of type null
+in APPPATH\Views\student\dashboard.php on line 15.
+ 1 APPPATH\Views\student\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('student/dashboard', [], true)
+ 5 APPPATH\Controllers\StudentDashboardController.php(30): view('student/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentDashboardController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-16 13:59:30 --> Undefined variable $student
+in APPPATH\Views\student\dashboard.php on line 15.
+ 1 APPPATH\Views\student\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student', 'C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('student/dashboard', [], true)
+ 5 APPPATH\Controllers\StudentDashboardController.php(16): view('student/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentDashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 13:59:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:59:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 13:59:48 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 13:59:48 --> Undefined variable $student
+in APPPATH\Views\student\dashboard.php on line 15.
+ 1 APPPATH\Views\student\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student', 'C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('student/dashboard', [], true)
+ 5 APPPATH\Controllers\StudentDashboardController.php(16): view('student/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentDashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 14:01:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 14:01:25 --> Trying to access array offset on value of type null
+in APPPATH\Views\student\dashboard.php on line 15.
+ 1 APPPATH\Views\student\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('student/dashboard', [], true)
+ 5 APPPATH\Controllers\StudentDashboardController.php(30): view('student/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentDashboardController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 14:01:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 14:01:27 --> Trying to access array offset on value of type null
+in APPPATH\Views\student\dashboard.php on line 15.
+ 1 APPPATH\Views\student\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('student/dashboard', [], true)
+ 5 APPPATH\Controllers\StudentDashboardController.php(30): view('student/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentDashboardController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 14:01:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:01:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:01:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:01:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:01:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:01:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 14:01:41 --> Trying to access array offset on value of type null
+in APPPATH\Views\student\dashboard.php on line 15.
+ 1 APPPATH\Views\student\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('student/dashboard', [], true)
+ 5 APPPATH\Controllers\StudentDashboardController.php(30): view('student/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentDashboardController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 14:04:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:04:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:04:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:04:08 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:04:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 14:04:16 --> Trying to access array offset on value of type null
+in APPPATH\Views\student\dashboard.php on line 15.
+ 1 APPPATH\Views\student\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Trying to access array offset on value of type null', 'C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('student/dashboard', [], true)
+ 5 APPPATH\Controllers\StudentDashboardController.php(27): view('student/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentDashboardController->dashboard()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 14:12:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:12:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:12:59 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:13:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 14:13:09 --> view(): Argument #2 ($data) must be of type array, CodeIgniter\Session\Session given, called in C:\xampp\htdocs\sms\app\Controllers\StudentLoginController.php on line 54
+in SYSTEMPATH\Common.php on line 1168.
+ 1 APPPATH\Controllers\StudentLoginController.php(54): view('student/dashboard', Object(CodeIgniter\Session\Session))
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentLoginController->login()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentLoginController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 14:13:43 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 14:13:43 --> Undefined variable $student
+in APPPATH\Views\student\dashboard.php on line 15.
+ 1 APPPATH\Views\student\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $student', 'C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('student/dashboard', [], true)
+ 5 APPPATH\Controllers\StudentLoginController.php(54): view('student/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentLoginController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentLoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 14:14:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 14:14:09 --> Undefined variable $studentData
+in APPPATH\Views\student\dashboard.php on line 15.
+ 1 APPPATH\Views\student\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $studentData', 'C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('student/dashboard', [], true)
+ 5 APPPATH\Controllers\StudentLoginController.php(54): view('student/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentLoginController->login()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentLoginController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 14:28:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:28:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 14:31:10 --> Undefined variable $studentData
+in APPPATH\Views\student\dashboard.php on line 15.
+ 1 APPPATH\Views\student\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $studentData', 'C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('student/dashboard', [], true)
+ 5 APPPATH\Controllers\StudentDashboardController.php(16): view('student/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentDashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 14:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:31:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:31:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 14:31:33 --> Undefined variable $studentData
+in APPPATH\Views\student\dashboard.php on line 15.
+ 1 APPPATH\Views\student\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $studentData', 'C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('student/dashboard', [], true)
+ 5 APPPATH\Controllers\StudentDashboardController.php(16): view('student/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentDashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-16 14:33:43 --> Undefined variable $studentData
+in APPPATH\Views\student\dashboard.php on line 15.
+ 1 APPPATH\Views\student\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $studentData', 'C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('student/dashboard', [], true)
+ 5 APPPATH\Controllers\StudentDashboardController.php(16): view('student/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentDashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 14:33:44 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:33:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:33:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 14:33:56 --> Undefined variable $studentData
+in APPPATH\Views\student\dashboard.php on line 15.
+ 1 APPPATH\Views\student\dashboard.php(15): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined variable $studentData', 'C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php', 15)
+ 2 SYSTEMPATH\View\View.php(224): include('C:\\xampp\\htdocs\\sms\\app\\Views\\student\\dashboard.php')
+ 3 SYSTEMPATH\View\View.php(227): CodeIgniter\View\View->CodeIgniter\View\{closure}()
+ 4 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('student/dashboard', [], true)
+ 5 APPPATH\Controllers\StudentDashboardController.php(16): view('student/dashboard', [...])
+ 6 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentDashboardController->index()
+ 7 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 8 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 14:36:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 14:36:23 --> Invalid file: "student/edit.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('student/edit.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('student/edit', [], true)
+ 3 APPPATH\Controllers\StudentDashboardController.php(43): view('student/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentDashboardController->edit()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 14:36:46 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 14:36:46 --> Invalid file: "student/edit.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('student/edit.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('student/edit', [], true)
+ 3 APPPATH\Controllers\StudentDashboardController.php(43): view('student/edit', [...])
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentDashboardController->edit()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentDashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 14:37:25 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 14:37:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 16:57:21 --> syntax error, unexpected single-quoted string "course", expecting "]"
+in APPPATH\Controllers\AdminDashboardController.php on line 124.
+ 1 SYSTEMPATH\Autoloader\Autoloader.php(289): CodeIgniter\Autoloader\Autoloader->includeFile('C:\\xampp\\htdocs\\sms\\app\\Controllers\\AdminDashboardController.php')
+ 2 SYSTEMPATH\Autoloader\Autoloader.php(267): CodeIgniter\Autoloader\Autoloader->loadInNamespace('App\\Controllers\\AdminDashboardController')
+ 3 [internal function]: CodeIgniter\Autoloader\Autoloader->loadClass('App\\Controllers\\AdminDashboardController')
+ 4 SYSTEMPATH\CodeIgniter.php(890): class_exists('\\App\\Controllers\\AdminDashboardController', true)
+ 5 SYSTEMPATH\CodeIgniter.php(484): CodeIgniter\CodeIgniter->startController()
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-16 17:02:17 --> Invalid file: "admin/import_students.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/import_students.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/import_students', [], true)
+ 3 APPPATH\Controllers\AdminDashboardController.php(99): view('admin/import_students')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminDashboardController->importStudents()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-16 17:05:01 --> Invalid file: "admin/import_students.php"
+in SYSTEMPATH\Exceptions\FrameworkException.php on line 33.
+ 1 SYSTEMPATH\View\View.php(212): CodeIgniter\Exceptions\FrameworkException::forInvalidFile('admin/import_students.php')
+ 2 SYSTEMPATH\Common.php(1180): CodeIgniter\View\View->render('admin/import_students', [], true)
+ 3 APPPATH\Controllers\AdminDashboardController.php(99): view('admin/import_students')
+ 4 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminDashboardController->importStudents()
+ 5 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 6 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 7 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-16 17:23:35 --> Undefined array key 6
+in APPPATH\Controllers\AdminDashboardController.php on line 179.
+ 1 APPPATH\Controllers\AdminDashboardController.php(179): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 6', 'C:\\xampp\\htdocs\\sms\\app\\Controllers\\AdminDashboardController.php', 179)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminDashboardController->teacherImport()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 17:24:53 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 17:38:50 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 17:39:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 18:17:06 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 18:23:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 18:24:05 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 18:24:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 18:24:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 18:31:00 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 18:31:00 --> Call to undefined method App\Models\TeacherModel::getAllTeachers
+in SYSTEMPATH\Model.php on line 838.
+ 1 APPPATH\Controllers\AdminDashboardController.php(225): CodeIgniter\Model->__call('getAllTeachers', [])
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminDashboardController->teacher_dashboard()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 18:32:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-16 18:33:45 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-16 18:41:42 --> Call to a member function getTempName() on null
+in APPPATH\Controllers\AdminDashboardController.php on line 164.
+ 1 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminDashboardController->teacherImport()
+ 2 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 3 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 4 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-16 18:43:13 --> Undefined array key 1
+in APPPATH\Controllers\AdminDashboardController.php on line 177.
+ 1 APPPATH\Controllers\AdminDashboardController.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\xampp\\htdocs\\sms\\app\\Controllers\\AdminDashboardController.php', 177)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminDashboardController->teacherImport()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-16 18:44:43 --> Undefined array key 1
+in APPPATH\Controllers\AdminDashboardController.php on line 177.
+ 1 APPPATH\Controllers\AdminDashboardController.php(177): CodeIgniter\Debug\Exceptions->errorHandler(2, 'Undefined array key 1', 'C:\\xampp\\htdocs\\sms\\app\\Controllers\\AdminDashboardController.php', 177)
+ 2 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminDashboardController->teacherImport()
+ 3 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+ 4 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 5 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-16 18:45:31 --> mysqli_sql_exception: Duplicate entry 'male' for key 'PRIMARY' in C:\xampp\htdocs\sms\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sms\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `te...', 0)
+#1 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 C:\xampp\htdocs\sms\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', NULL, false)
+#4 C:\xampp\htdocs\sms\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\sms\system\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\xampp\htdocs\sms\system\BaseModel.php(874): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\xampp\htdocs\sms\app\Controllers\AdminDashboardController.php(211): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\xampp\htdocs\sms\system\CodeIgniter.php(932): App\Controllers\AdminDashboardController->teacherImport()
+#9 C:\xampp\htdocs\sms\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+#10 C:\xampp\htdocs\sms\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sms\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-07-16 18:45:31 --> Duplicate entry 'male' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `teachers` (`course`, `email`, `first_name`, `last_name`)
+VALUES (\'phy\\r\',\'male\',\'a\',\'g\'), (\'phy\\r\',\'male\',\'b\',\'h\'), (\'phy\\r\',\'male\',\'c\',\'i\'), (\'phy\\r\',\'male\',\'d\',\'j\'), (\'phy\\r\',\'male\',\'e\',\'k\'), (\'phy\\r\',\'male\',\'f\',\'l\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `teachers` (`course`, `email`, `first_name`, `last_name`)
+VALUES (\'phy\\r\',\'male\',\'a\',\'g\'), (\'phy\\r\',\'male\',\'b\',\'h\'), (\'phy\\r\',\'male\',\'c\',\'i\'), (\'phy\\r\',\'male\',\'d\',\'j\'), (\'phy\\r\',\'male\',\'e\',\'k\'), (\'phy\\r\',\'male\',\'f\',\'l\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `teachers` (`course`, `email`, `first_name`, `last_name`)
+VALUES (\'phy\\r\',\'male\',\'a\',\'g\'), (\'phy\\r\',\'male\',\'b\',\'h\'), (\'phy\\r\',\'male\',\'c\',\'i\'), (\'phy\\r\',\'male\',\'d\',\'j\'), (\'phy\\r\',\'male\',\'e\',\'k\'), (\'phy\\r\',\'male\',\'f\',\'l\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `teachers` (`course`, `email`, `first_name`, `last_name`)
+VALUES (\'phy\\r\',\'male\',\'a\',\'g\'), (\'phy\\r\',\'male\',\'b\',\'h\'), (\'phy\\r\',\'male\',\'c\',\'i\'), (\'phy\\r\',\'male\',\'d\',\'j\'), (\'phy\\r\',\'male\',\'e\',\'k\'), (\'phy\\r\',\'male\',\'f\',\'l\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([...], null, 100)
+ 7 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([...], null, 100, false)
+ 8 APPPATH\Controllers\AdminDashboardController.php(211): CodeIgniter\BaseModel->insertBatch([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminDashboardController->teacherImport()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-16 18:48:28 --> mysqli_sql_exception: Duplicate entry 'male' for key 'PRIMARY' in C:\xampp\htdocs\sms\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sms\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `te...', 0)
+#1 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 C:\xampp\htdocs\sms\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', NULL, false)
+#4 C:\xampp\htdocs\sms\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\sms\system\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\xampp\htdocs\sms\system\BaseModel.php(874): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\xampp\htdocs\sms\app\Controllers\AdminDashboardController.php(211): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\xampp\htdocs\sms\system\CodeIgniter.php(932): App\Controllers\AdminDashboardController->teacherImport()
+#9 C:\xampp\htdocs\sms\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+#10 C:\xampp\htdocs\sms\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sms\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-07-16 18:48:28 --> Duplicate entry 'male' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `teachers` (`course`, `email`, `first_name`, `last_name`)
+VALUES (\'phy\\r\',\'male\',\'a\',\'g\'), (\'phy\\r\',\'male\',\'b\',\'h\'), (\'phy\\r\',\'male\',\'c\',\'i\'), (\'phy\\r\',\'male\',\'d\',\'j\'), (\'phy\\r\',\'male\',\'e\',\'k\'), (\'phy\\r\',\'male\',\'f\',\'l\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `teachers` (`course`, `email`, `first_name`, `last_name`)
+VALUES (\'phy\\r\',\'male\',\'a\',\'g\'), (\'phy\\r\',\'male\',\'b\',\'h\'), (\'phy\\r\',\'male\',\'c\',\'i\'), (\'phy\\r\',\'male\',\'d\',\'j\'), (\'phy\\r\',\'male\',\'e\',\'k\'), (\'phy\\r\',\'male\',\'f\',\'l\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `teachers` (`course`, `email`, `first_name`, `last_name`)
+VALUES (\'phy\\r\',\'male\',\'a\',\'g\'), (\'phy\\r\',\'male\',\'b\',\'h\'), (\'phy\\r\',\'male\',\'c\',\'i\'), (\'phy\\r\',\'male\',\'d\',\'j\'), (\'phy\\r\',\'male\',\'e\',\'k\'), (\'phy\\r\',\'male\',\'f\',\'l\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `teachers` (`course`, `email`, `first_name`, `last_name`)
+VALUES (\'phy\\r\',\'male\',\'a\',\'g\'), (\'phy\\r\',\'male\',\'b\',\'h\'), (\'phy\\r\',\'male\',\'c\',\'i\'), (\'phy\\r\',\'male\',\'d\',\'j\'), (\'phy\\r\',\'male\',\'e\',\'k\'), (\'phy\\r\',\'male\',\'f\',\'l\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([...], null, 100)
+ 7 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([...], null, 100, false)
+ 8 APPPATH\Controllers\AdminDashboardController.php(211): CodeIgniter\BaseModel->insertBatch([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminDashboardController->teacherImport()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+ERROR - 2023-07-16 18:51:25 --> mysqli_sql_exception: Duplicate entry 'male' for key 'PRIMARY' in C:\xampp\htdocs\sms\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sms\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `te...', 0)
+#1 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 C:\xampp\htdocs\sms\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', NULL, false)
+#4 C:\xampp\htdocs\sms\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\sms\system\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\xampp\htdocs\sms\system\BaseModel.php(874): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\xampp\htdocs\sms\app\Controllers\AdminDashboardController.php(211): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\xampp\htdocs\sms\system\CodeIgniter.php(932): App\Controllers\AdminDashboardController->teacherImport()
+#9 C:\xampp\htdocs\sms\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+#10 C:\xampp\htdocs\sms\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sms\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-07-16 18:51:25 --> Duplicate entry 'male' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `teachers` (`course`, `email`, `first_name`, `last_name`)
+VALUES (\'phy\\r\',\'male\',\'a\',\'g\'), (\'phy\\r\',\'male\',\'b\',\'h\'), (\'phy\\r\',\'male\',\'c\',\'i\'), (\'phy\\r\',\'male\',\'d\',\'j\'), (\'phy\\r\',\'male\',\'e\',\'k\'), (\'phy\\r\',\'male\',\'f\',\'l\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `teachers` (`course`, `email`, `first_name`, `last_name`)
+VALUES (\'phy\\r\',\'male\',\'a\',\'g\'), (\'phy\\r\',\'male\',\'b\',\'h\'), (\'phy\\r\',\'male\',\'c\',\'i\'), (\'phy\\r\',\'male\',\'d\',\'j\'), (\'phy\\r\',\'male\',\'e\',\'k\'), (\'phy\\r\',\'male\',\'f\',\'l\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `teachers` (`course`, `email`, `first_name`, `last_name`)
+VALUES (\'phy\\r\',\'male\',\'a\',\'g\'), (\'phy\\r\',\'male\',\'b\',\'h\'), (\'phy\\r\',\'male\',\'c\',\'i\'), (\'phy\\r\',\'male\',\'d\',\'j\'), (\'phy\\r\',\'male\',\'e\',\'k\'), (\'phy\\r\',\'male\',\'f\',\'l\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `teachers` (`course`, `email`, `first_name`, `last_name`)
+VALUES (\'phy\\r\',\'male\',\'a\',\'g\'), (\'phy\\r\',\'male\',\'b\',\'h\'), (\'phy\\r\',\'male\',\'c\',\'i\'), (\'phy\\r\',\'male\',\'d\',\'j\'), (\'phy\\r\',\'male\',\'e\',\'k\'), (\'phy\\r\',\'male\',\'f\',\'l\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([...], null, 100)
+ 7 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([...], null, 100, false)
+ 8 APPPATH\Controllers\AdminDashboardController.php(211): CodeIgniter\BaseModel->insertBatch([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminDashboardController->teacherImport()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-16 18:55:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

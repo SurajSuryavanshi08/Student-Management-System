@@ -1,0 +1,494 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:600|Open+Sans:600&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+}
+
+.sidebar {
+  position: fixed;
+  width: 240px;
+  left: -240px;
+  height: 100%;
+  background: #1e1e1e;
+  transition: all 0.5s ease;
+}
+
+.sidebar header {
+  font-size: 28px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #1b1b1b;
+  user-select: none;
+  font-family: "Montserrat", sans-serif;
+}
+
+.sidebar a {
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: white;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  border-left: 5px solid transparent;
+  font-family: "Open Sans", sans-serif;
+  transition: all 0.5s ease;
+}
+
+a.active,
+a:hover {
+  border-left: 5px solid #b93632;
+  color: #b93632;
+}
+
+.sidebar a i {
+  font-size: 23px;
+  margin-right: 16px;
+}
+
+.sidebar a span {
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+#check {
+  display: none;
+}
+
+label #btn,
+label #cancel {
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #262626;
+  margin: 15px 30px;
+  font-size: 29px;
+  background: #262626;
+  height: 45px;
+  width: 45px;
+  text-align: center;
+  line-height: 45px;
+  transition: all 0.5s ease;
+}
+
+label #cancel {
+  opacity: 0;
+  visibility: hidden;
+}
+
+#check:checked ~ .sidebar {
+  left: 0;
+}
+
+#check:checked ~ label #btn {
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+
+#check:checked ~ label #cancel {
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+
+.container {
+  margin-left: 240px;
+  padding: 20px;
+}
+
+h2 {
+  font-size: 28px;
+  color: #b93632;
+  margin-bottom: 20px;
+  font-family: "Montserrat", sans-serif;
+  text-align: center;
+}
+
+.search-filter {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 15px;
+}
+
+.search-bar input[type="text"] {
+  padding: 5px 10px;
+  border: 1px solid black;
+  border-radius: 5px;
+}
+
+.search-bar input[type="submit"] {
+  padding: 5px 10px;
+  background-color: darkred;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.actions {
+  display: flex;
+}
+
+.add-new-btn {
+  padding: 5px 10px;
+  background-color: darkred;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-left: 10px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+table th,
+table td {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+.profile-photo img {
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+
+.actions td:first-child {
+  border-left: none;
+  border-right: 1px solid black;
+}
+
+/* Fix the borders for the last cell in the action column */
+.actions td:last-child {
+  border-left: 1px solid black;
+  border-right: none;
+}
+
+/* Fix the borders for the action links */
+.actions a {
+  display: inline-block;
+  padding: 5px 10px;
+  text-decoration: none;
+  color: black;
+  border: 1px solid black;
+  border-radius: 5px;
+  margin-right: 5px;
+}
+
+.actions a:hover {
+  background-color: black;
+  color: white;
+}
+
+.pagination {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.form-group {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.form-group a {
+  display: inline-block;
+  padding: 5px 10px;
+  margin-right: 5px;
+  text-decoration: none;
+  color: white;
+  border-radius: 5px;
+}
+
+.form-group a:first-child {
+  background-color: black;
+}
+
+.form-group a:last-child {
+  background-color: darkred;
+}
+label {
+  display: block;
+  font-size: 16px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+input,
+select {
+  width: 300px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+  outline: none;
+  border-color: #b93632;
+}
+
+input[type="file"] {
+  padding: 8px 12px;
+}
+
+input[type="submit"] {
+  background-color: #b93632;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  width: 170px;
+  margin-right: 2%;
+}
+
+.custom-button {
+  color: white;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  text-decoration: none;
+}
+
+.custom-button a {
+  color: white;
+  text-decoration: none;
+}
+
+.custom-button a:hover {
+  background-color: #1b1b1b;
+  color: #fff;
+}
+
+@media (max-width: 860px) {
+  .container {
+    margin-left: 0;
+    padding: 20px;
+  }
+
+  .search-filter,
+  .actions {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .actions {
+    margin-top: 10px;
+  }
+}
+
+.admin-profile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.admin-profile img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.admin-profile form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-profile input[type="file"] {
+  padding: 8px 12px;
+  margin-bottom: 10px;
+}
+
+.admin-profile input[type="submit"] {
+  background-color: #b93632;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.admin-profile input[type="submit"]:hover {
+  background-color: #8c1b21;
+}
+
+.form-group.edit-profile {
+  margin-bottom: 30px;
+}
+
+.form-group.edit-profile h3 {
+  font-size: 24px;
+  color: #b93632;
+  margin-bottom: 10px;
+}
+
+.form-group.edit-profile input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+.form-group.edit-profile input:focus {
+  outline: none;
+  border-color: #b93632;
+}
+
+.form-group.edit-profile input[type="submit"] {
+  background-color: #b93632;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.form-group.edit-profile input[type="submit"]:hover {
+  background-color: #8c1b21;
+}
+
+.form-group.edit-profile p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.form-group.edit-profile a {
+  color: #b93632;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.form-group.edit-profile a:hover {
+  text-decoration: underline;
+}
+
+.form-group.edit-profile a.back-link {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+/* 
+
+body,
+h2,
+form,
+label,
+input,
+select {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f9f9f9;
+}
+
+.container {
+    /* max-width: 800px;
+    margin: 30px auto;
+    padding: 20px; 
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h2 {
+    font-size: 28px;
+    color: #b93632;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.form-group {
+    width: 400px;
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+input,
+select {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus,
+select:focus {
+    outline: none;
+    border-color: #b93632;
+}
+
+input[type="file"] {
+    padding: 8px 12px;
+}
+
+input[type="submit"] {
+    background-color: #b93632;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    width: 40%;
+    margin-right: 2%;
+}
+
+.back-button {
+    background-color: #b93632;
+    color: #fff;
+    padding: 12px;
+    margin-left: 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: bold;
+    display: inline-block;
+    width: 34%;
+    text-align: center;
+}
+
+.back-button :hover {
+    background-color: #b93632;
+    color: #fff;
+}
+</style> */

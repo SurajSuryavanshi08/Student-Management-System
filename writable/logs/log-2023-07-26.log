@@ -1,0 +1,105 @@
+INFO - 2023-07-26 08:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-26 08:55:16 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-26 08:55:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-26 08:55:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-26 08:55:41 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+CRITICAL - 2023-07-26 08:58:19 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [])
+ 3 APPPATH\Models\StudentModel.php(24): CodeIgniter\Model->update()
+ 4 APPPATH\Controllers\StudentLoginController.php(63): App\Models\StudentModel->changePassword('gaikwadaditya1121@gmail.com', '123')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentLoginController->changePassword('gaikwadaditya1121@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentLoginController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-26 09:00:40 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [])
+ 3 APPPATH\Models\StudentModel.php(24): CodeIgniter\Model->update()
+ 4 APPPATH\Controllers\StudentLoginController.php(62): App\Models\StudentModel->changePassword('gaikwadaditya1121@gmail.com', '123')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentLoginController->changePassword('gaikwadaditya1121@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentLoginController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+CRITICAL - 2023-07-26 09:10:00 --> There is no data to update.
+in SYSTEMPATH\BaseModel.php on line 924.
+ 1 SYSTEMPATH\BaseModel.php(924): CodeIgniter\Database\Exceptions\DataException::forEmptyDataset('update')
+ 2 SYSTEMPATH\Model.php(756): CodeIgniter\BaseModel->update(null, [])
+ 3 APPPATH\Models\StudentModel.php(22): CodeIgniter\Model->update()
+ 4 APPPATH\Controllers\StudentLoginController.php(58): App\Models\StudentModel->updatePassword('gaikwadaditya1121@gmail.com', '123')
+ 5 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\StudentLoginController->changePassword('gaikwadaditya1121@gmail.com')
+ 6 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\StudentLoginController))
+ 7 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 8 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-26 09:24:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-26 10:43:27 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-26 10:53:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+INFO - 2023-07-26 10:53:47 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-26 10:54:33 --> mysqli_sql_exception: Duplicate entry 'gaikwadaditya1121@gmail.com' for key 'PRIMARY' in C:\xampp\htdocs\sms\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sms\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `st...', 0)
+#1 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `st...')
+#2 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `st...')
+#3 C:\xampp\htdocs\sms\system\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `st...', Array, false)
+#4 C:\xampp\htdocs\sms\system\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\sms\system\BaseModel.php(782): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\sms\system\Model.php(730): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\sms\app\Models\StudentModel.php(35): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\sms\app\Controllers\AdminDashboardController.php(104): App\Models\StudentModel->addStudent(Array)
+#9 C:\xampp\htdocs\sms\system\CodeIgniter.php(932): App\Controllers\AdminDashboardController->addStudent()
+#10 C:\xampp\htdocs\sms\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+#11 C:\xampp\htdocs\sms\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#12 C:\xampp\htdocs\sms\index.php(67): CodeIgniter\CodeIgniter->run()
+#13 {main}
+CRITICAL - 2023-07-26 10:54:33 --> Duplicate entry 'gaikwadaditya1121@gmail.com' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `students` (`first_name`, `last_name`, `gender`, `email`, `address`, `profile_photo`) VALUES (\'Aditya\', \'Gaikwad\', \'Male\', \'gaikwadaditya1121@gmail.com\', \'Pune\', \'1690368873_18c82795b16b900120c3.jpg\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `students` (`first_name`, `last_name`, `gender`, `email`, `address`, `profile_photo`) VALUES (\'Aditya\', \'Gaikwad\', \'Male\', \'gaikwadaditya1121@gmail.com\', \'Pune\', \'1690368873_18c82795b16b900120c3.jpg\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `students` (`first_name`, `last_name`, `gender`, `email`, `address`, `profile_photo`) VALUES (\'Aditya\', \'Gaikwad\', \'Male\', \'gaikwadaditya1121@gmail.com\', \'Pune\', \'1690368873_18c82795b16b900120c3.jpg\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2309): CodeIgniter\Database\BaseConnection->query('INSERT INTO `students` (`first_name`, `last_name`, `gender`, `email`, `address`, `profile_photo`) VALUES (:first_name:, :last_name:, :gender:, :email:, :address:, :profile_photo:)', [...], false)
+ 5 SYSTEMPATH\Model.php(330): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(782): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(730): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Models\StudentModel.php(35): CodeIgniter\Model->insert([...])
+ 9 APPPATH\Controllers\AdminDashboardController.php(104): App\Models\StudentModel->addStudent([...])
+10 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminDashboardController->addStudent()
+11 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+12 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+13 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-26 10:55:17 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2023-07-26 10:55:57 --> mysqli_sql_exception: Duplicate entry 'sachin@gmail.com' for key 'PRIMARY' in C:\xampp\htdocs\sms\system\Database\MySQLi\Connection.php:295
+Stack trace:
+#0 C:\xampp\htdocs\sms\system\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `te...', 0)
+#1 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `te...')
+#2 C:\xampp\htdocs\sms\system\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `te...')
+#3 C:\xampp\htdocs\sms\system\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `te...', NULL, false)
+#4 C:\xampp\htdocs\sms\system\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+#5 C:\xampp\htdocs\sms\system\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch(Array, NULL, 100)
+#6 C:\xampp\htdocs\sms\system\BaseModel.php(874): CodeIgniter\Model->doInsertBatch(Array, NULL, 100, false)
+#7 C:\xampp\htdocs\sms\app\Controllers\AdminDashboardController.php(309): CodeIgniter\BaseModel->insertBatch(Array)
+#8 C:\xampp\htdocs\sms\system\CodeIgniter.php(932): App\Controllers\AdminDashboardController->teacherImport()
+#9 C:\xampp\htdocs\sms\system\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+#10 C:\xampp\htdocs\sms\system\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\sms\index.php(67): CodeIgniter\CodeIgniter->run()
+#12 {main}
+CRITICAL - 2023-07-26 10:55:57 --> Duplicate entry 'sachin@gmail.com' for key 'PRIMARY'
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 295.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(295): mysqli->query('INSERT INTO `teachers` (`address`, `course`, `email`, `first_name`, `gender`, `last_name`)
+VALUES (\'Delhi\\r\',\'DAA\',\'sachin@gmail.com\',\'sachin\',\'Male\',\'kumar\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(692): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `teachers` (`address`, `course`, `email`, `first_name`, `gender`, `last_name`)
+VALUES (\'Delhi\\r\',\'DAA\',\'sachin@gmail.com\',\'sachin\',\'Male\',\'kumar\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(606): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `teachers` (`address`, `course`, `email`, `first_name`, `gender`, `last_name`)
+VALUES (\'Delhi\\r\',\'DAA\',\'sachin@gmail.com\',\'sachin\',\'Male\',\'kumar\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(1801): CodeIgniter\Database\BaseConnection->query('INSERT INTO `teachers` (`address`, `course`, `email`, `first_name`, `gender`, `last_name`)
+VALUES (\'Delhi\\r\',\'DAA\',\'sachin@gmail.com\',\'sachin\',\'Male\',\'kumar\')', null, false)
+ 5 SYSTEMPATH\Database\BaseBuilder.php(2192): CodeIgniter\Database\BaseBuilder->batchExecute('_insertBatch', 100)
+ 6 SYSTEMPATH\Model.php(364): CodeIgniter\Database\BaseBuilder->insertBatch([...], null, 100)
+ 7 SYSTEMPATH\BaseModel.php(874): CodeIgniter\Model->doInsertBatch([...], null, 100, false)
+ 8 APPPATH\Controllers\AdminDashboardController.php(309): CodeIgniter\BaseModel->insertBatch([...])
+ 9 SYSTEMPATH\CodeIgniter.php(932): App\Controllers\AdminDashboardController->teacherImport()
+10 SYSTEMPATH\CodeIgniter.php(497): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\AdminDashboardController))
+11 SYSTEMPATH\CodeIgniter.php(366): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 FCPATH\index.php(67): CodeIgniter\CodeIgniter->run()
+INFO - 2023-07-26 10:56:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

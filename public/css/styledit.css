@@ -1,0 +1,165 @@
+body,
+h2,
+h3,
+form,
+label,
+input,
+select,
+p,
+a,
+img {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f9f9f9;
+}
+
+.container {
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+h2 {
+  font-size: 28px;
+  color: #b93632;
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.admin-profile {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.admin-profile img {
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 10px;
+}
+
+.admin-profile form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.admin-profile input[type="file"] {
+  padding: 8px 12px;
+  margin-bottom: 10px;
+}
+
+.admin-profile input[type="submit"] {
+  background-color: #b93632;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  padding: 10px 20px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.admin-profile input[type="submit"]:hover {
+  background-color: #8c1b21;
+}
+
+.form-group.edit-profile {
+  margin-bottom: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.form-group.edit-profile h3 {
+  font-size: 24px;
+  color: #b93632;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+.form-group.edit-profile input {
+  width: 200px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+  text-align: center;
+}
+
+.form-group.edit-profile input:focus {
+  outline: none;
+  border-color: #b93632;
+}
+
+.form-group.edit-profile .edit-profile-submit {
+  margin-top: 10px;
+  text-align: center;
+}
+
+.form-group.edit-profile input[type="submit"] {
+  background-color: #b93632;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-transform: uppercase;
+}
+
+.form-group.edit-profile input[type="submit"]:hover {
+  background-color: #8c1b21;
+}
+.form-group p {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.form-group a {
+  color: #b93632;
+  text-decoration: none;
+  font-size: 16px;
+}
+
+.form-group a:hover {
+  text-decoration: underline;
+}
+
+.form-group a.back-link {
+  display: inline-block;
+  margin-top: 20px;
+}
+
+.form-group .other-links {
+  display: flex;
+  justify-content: space-between; /* Add this line */
+  margin-top: 20px;
+}
+
+.form-group .other-links a {
+  background-color: #1e1e1e;
+  color: #fff;
+  border: none;
+  cursor: pointer;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+  padding: 15px 30px;
+  border-radius: 5px;
+  text-transform: uppercase;
+  margin: 10px;
+  text-decoration: none;
+}
+
+.form-group .other-links a:hover {
+  background-color: #b93632;
+}
